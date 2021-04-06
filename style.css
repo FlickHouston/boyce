@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
+/*font-family: 'Work Sans', sans-serif;*/
+
+::selection {
+	color: white;
+	background-color: rgba(255, 150, 170, 0.3);
+}
+/*copy/pasted no drag or select*/
+svg,
+img,
+a,
+nav {
+	-webkit-user-drag: none;
+	-khtml-user-drag: none;
+	-moz-user-drag: none;
+	-o-user-drag: none;
+	user-drag: none;
+
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-khtml-user-select: none; /* Konqueror HTML */
+	-moz-user-select: none; /* Old versions of Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+a {
+	cursor: cell;
+}
+
+/*begin footer agro*/
+body {
+	position: relative;
+	min-height: 100vh;
+}
+
+.content-wrap {
+	padding-bottom: 1rem;
+}
+
+footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+/*end footer agro*/
+
+body {
+	background: #000;
+	font-family: "Work Sans";
+	color: #fff;
+	font-size: 16px;
+	line-height: 1.5;
+	padding-top: 104px;
+	/*added padding to the top of the page to create space for the header, even though it appears to be ok.
+    maybe because I had text floating around in Body?*/
+}
+
+a {
+	color: #fff;
+	text-decoration: none;
+}
+
+header nav a {
+	margin-right: 20px;
+	border-bottom: 2px solid rgba(0, 0, 0, 0);
+	padding-bottom: 3px;
+	transition: border-color 0.3s ease-in-out;
+}
+
+header nav a.selected {
+	border-color: #fff;
+}
+
+header nav a:hover {
+	border-color: #ff96aa;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	z-index: 2;
+	/*z-index is layer order, default is 1. only useful in fixed or absolute positioning*/
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.8);
+	backdrop-filter: blur(5px);
+	width: 100%;
+	padding: 20px;
+}
+
+header h1 {
+	width: 64px;
+	filter: blur(0.01px);
+	transition: blur(2px) 0.4s;
+	transition-property: blur(2px);
+	transition-duration: 0.4s;
+	transition-timing-function: ease-in-out;
+}
+
+header h1:hover {
+	filter: blur(2px);
+}
+
+.photos {
+	margin: 0 auto;
+	max-width: 1080px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-end;
+	justify-content: center;
+	padding: 0px 10px 64px 10px;
+}
+
+.photo {
+	width: 330px;
+	margin: 10px;
+	position: relative;
+}
+
+.photo:hover .overlay {
+	opacity: 1;
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.7);
+	backdrop-filter: blur(2px);
+	opacity: 0;
+	transition: all 0.4s;
+	filter: grayscale(80%);
+}
+
+.photo h2 {
+	font-size: 32px;
+	line-height: 1.2;
+	position: absolute;
+	left: -15px;
+	top: -15px;
+}
+
+.small {
+	width: 220px;
+}
+
+.large {
+	width: 400px;
+}
+
+footer {
+	padding: 20px;
+	margin-top: auto;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	align-items: center;
+	z-index: 2;
+}
+
+footer nav a {
+	text-decoration: none;
+}
+
+footer nav svg {
+	width: 16px;
+	margin-right: 5px;
+	transition: filter 0.2s;
+	transition-timing-function: cubic-bezier(0.42, 0, 0.71, 1.1);
+}
+
+footer nav svg:hover {
+	filter: invert(57%) sepia(8%) saturate(1700%) hue-rotate(315deg)
+		brightness(148%) contrast(143%);
+}
+
+.list {
+	margin: 100px 150px 150px 150px;
+}
+
+/*this is a psuedo element that allows you to insert content before and after*/
+.list a:after {
+	content: "/";
+}
+
+.list a:last-child:after {
+	content: " ";
+}
+
+.list a {
+	font-size: 50px;
+}
+
+.list a img {
+	opacity: 0;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	max-width: 500px;
+	pointer-events: none;
+	transition: opacity 0.3s;
+}
+
+.list a:hover img {
+	opacity: 1;
+}

@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap');
+/*font-family: 'Work Sans', sans-serif;
+
+#2F6A49 Green
+#FFB6C4Pink
+#FFD400 Yellow
+#FFD7B3 Orange
+#FE5504 Red
+
+Orange: #F95C00
+Beige: #FFD7B3
+
+*/
+
+body {
+    font-family: 'Work Sans';
+    font-size: 18px;
+    line-height: 1.3;
+}
+
+header {
+    background: #2F6A49;
+    padding: 20px;
+    overflow: hidden;
+}
+
+header h1 {
+    float: left;
+}
+header nav {
+    float: right;
+    font-size: 16px;
+    margin-top: 4px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #EEE;
+    margin-right: 30px;
+    padding-bottom: 4px;
+}
+
+header nav a:hover {
+    border-bottom: 2px solid #FFB6C4;
+}
+
+.splash {
+    background-image: url("assets/header-background.svg");
+    background-size: cover;
+background-position: top;
+    padding-top: 275px;
+    padding-bottom: 275px;
+}
+
+.splash h2 {
+    font-size: 80px;
+    color: #FE5504;
+    text-align: center;
+    line-height: 1.1;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+
+}
+
+.about {
+    background: #FFB6C4;
+    color: #2F6A49;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 100px;
+}
+
+.about h3 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.about p {
+    font-size: 26px;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.food {
+    overflow: hidden;
+    background: #FFD400;
+    max-height: 380px;
+    width: 100%;
+}
+
+.food .text {
+
+    width: 50%;
+    color: #2F6A49;
+    float: left;
+    padding-top: 60px;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-bottom: 50px;
+    display: block;
+}
+
+.food .text h4 {
+    font-size: 30px;
+padding-bottom: 30px;
+width: 400px;
+margin-left: auto;
+margin-right: auto;
+}
+
+.food .text p {
+    font-size: 20px;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.food .image {
+    width: 50%;
+    float: right;
+}
+
+.quotes {
+    width: 100%;
+    background: #FFD7B3;
+}
+
+.quotes p {
+    font-size: 36px;
+    color: #2F6A49;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 80px;
+    padding-right: 80px; 
+    text-align: center;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.images {
+    width: 100%
+}
+
+.images img {
+    width: 33.33%;
+    float: left;
+}
+
+.findus {
+    width: 100%;
+    overflow: hidden;
+    background: #2F6A49;
+    color:#FFB6C4;
+    text-align: center;
+}
+
+.findus div {
+    width: 33.33%;
+    float: left;
+}
+
+.findus img {
+    border-radius: 100%;
+    margin: 10%;
+}
+
+.findus p {
+    width: 250px;
+    margin: auto;
+    padding-top: 15%;
+}
+
+.logos {
+background: #FFF;
+color: #FE5504;
+overflow: hidden;
+padding-top: 40px;
+padding-bottom: 60px;
+}
+
+.logos p {
+    text-align: center;
+    padding-bottom: 60px;
+}
+
+.logos div {
+    height: 53px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logos img {
+    width: 150px;
+    margin-right: 50px;
+    display: block;
+    float: left;
+    
+}
+
+.logos img:last-child {
+width: 225px;
+margin-top: 10px;
+margin-right: 0px;
+}
+
+
+
+
+footer {
+    overflow: hidden;
+     color: #2F6A49;   
+     font-size: 16px;
+     background: #FFB6C4;
+     padding: 20px;
+}
+
+footer h1 {
+    float: left;
+
+}
+
+footer p {
+    float: right;
+    font-size: 16px;
+    margin-top: 4px;
+}
+
+@media (max-width: 1150px) {
+
+.food .text {
+
+    padding-top: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 35px;
+}
+
+}
+
+    
+ @media (max-width: 969px) {
+
+    body {
+        font-family: 'Work Sans';
+        font-size: 14px;
+        line-height: 1;
+    }
+
+    header {
+        padding: 20px;
+    }
+
+    header h1 {
+        float: none;
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
+    header nav {
+        float: none;
+        font-size: 16px;
+    }
+
+    header nav a {
+        text-transform: capitalize;
+    }
+
+    .splash {
+        background-size: cover;
+    background-position: top;
+        padding-top: 150px;
+        padding-bottom: 150px;
+    }
+    
+    .splash h2 {
+        font-size: 50px;
+        line-height: 1.1;
+        margin-left: auto;
+        margin-right: auto;
+        width: 85%;
+    
+    }
+
+    .about {
+        padding-top: 40px;
+    }
+    .about p {
+        font-size: 18px;
+        line-height: 1.2;
+        width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .food {
+        text-align: center;
+        max-height: none;
+        padding-bottom: 65px;
+    }
+
+    .food .text {
+        float: none;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    .food .text h4 {
+        font-size: 36px;
+        text-align: center;
+        width: auto;
+    }
+
+    .food .text p {
+        font-size: 18px;
+        line-height: 1.2;
+        width: 90%;
+    }
+    
+    .food .image {
+        float: none;
+        width: 100%;
+        display: block;
+    }
+
+    .quotes p {
+        padding-top: 70px;
+        padding-bottom: 70px;
+        padding-left: 55px;
+        padding-right: 55px;
+    }
+     }
+
+    @media (max-width: 755px) {
+
+    .images img {
+        width: 100%;
+        float: none;
+    }
+
+    .findus {
+        padding-bottom: 20%;
+        padding-top: 8%;
+    }
+    .findus div {
+        width: 100%;
+        float: none;
+
+    }
+
+    .findus img {
+    }
+
+    .findus p {
+        width: 300px;
+        padding-top: 0%;
+        font-size: 20px;
+    }
+
+.logos p {
+    font-size: 18px;
+    margin-bottom: 80px;
+}
+
+.logos div {
+    height: 53px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logos {
+    padding-bottom: 200px;
+}
+
+.logos img {
+    float: none;
+    display: block;
+    margin-right: 0;
+    margin-top: 40px;
+}
+
+.logos img:last-child {
+    width: 225px;
+    margin-top: 40px;
+    margin-right: 0px;
+}
+
+}
